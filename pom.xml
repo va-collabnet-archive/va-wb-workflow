@@ -16,11 +16,11 @@
 	bundle that supports functionalities related to project-management,
 	workflow, translation, etc.</description>
 
-	<scm>
+	<!--scm>
 		<connection>scm:svn:https://csfe.aceworkspace.net/svn/repos/va-jif-wb-bundle/va-jif-wb-workflow/trunk</connection>
 		<developerConnection>scm:svn:https://csfe.aceworkspace.net/svn/repos/va-jif-wb-bundle/va-jif-wb-workflow/trunk</developerConnection>
 		<url>https://csfe.aceworkspace.net/integration/viewvc/viewvc.cgi/va-jif-wb-workflow/trunk/?root=va-jif-wb-bundle&amp;system=exsy1002</url>
-	</scm>
+	</scm-->
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
