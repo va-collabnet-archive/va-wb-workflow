@@ -1,0 +1,99 @@
+<org.ihtsdo.project.workflow.model.WorkflowDefinition>
+  <roles>
+    <org.ihtsdo.project.workflow.model.WfRole>
+      <name>Clinical editor role A</name>
+      <id>5609dc3a-9a1a-3b4e-8da8-50c344e3d533</id>
+    </org.ihtsdo.project.workflow.model.WfRole>
+    <org.ihtsdo.project.workflow.model.WfRole>
+      <name>Clinical editor role B</name>
+      <id>6f81d124-0591-3702-b0b1-95da03f16a9c</id>
+    </org.ihtsdo.project.workflow.model.WfRole>
+  </roles>
+  <states>
+    <org.ihtsdo.project.workflow.model.WfState>
+      <name>Escalated</name>
+      <id>692f7fd2-2353-3016-a055-f90487c4ab03</id>
+    </org.ihtsdo.project.workflow.model.WfState>
+    <org.ihtsdo.project.workflow.model.WfState>
+      <name>For discussion</name>
+      <id>c5512325-cf3d-3a34-80f2-7cec28a39359</id>
+    </org.ihtsdo.project.workflow.model.WfState>
+    <org.ihtsdo.project.workflow.model.WfState>
+      <name>For review</name>
+      <id>12735c83-f32d-3e1a-a98d-974bc72a95a9</id>
+    </org.ihtsdo.project.workflow.model.WfState>
+    <org.ihtsdo.project.workflow.model.WfState>
+      <name>approved for publication status</name>
+      <id>df7fc5df-812d-3427-863a-09ff88926ba0</id>
+    </org.ihtsdo.project.workflow.model.WfState>
+    <org.ihtsdo.project.workflow.model.WfState>
+      <name>canceled status</name>
+      <id>5a217399-281e-34e9-a08b-fcef8b6f5b0e</id>
+    </org.ihtsdo.project.workflow.model.WfState>
+    <org.ihtsdo.project.workflow.model.WfState>
+      <name>worklist item assigned</name>
+      <id>a166813a-408c-3cbf-a96f-7f3c6a946684</id>
+    </org.ihtsdo.project.workflow.model.WfState>
+  </states>
+  <actions>
+    <entry>
+      <string>Approve for publication</string>
+      <org.ihtsdo.project.workflow.model.WfAction>
+        <name>Approve for publication</name>
+        <id>cf7b1fca-8007-42e0-9b27-8f92712ee537</id>
+        <consequence>
+          <name>approved for publication status</name>
+          <id>df7fc5df-812d-3427-863a-09ff88926ba0</id>
+        </consequence>
+        <businessProcess>sampleProcesses/PromoteToReleaseActionWithoutDestination.bp</businessProcess>
+      </org.ihtsdo.project.workflow.model.WfAction>
+    </entry>
+    <entry>
+      <string>Escalate</string>
+      <org.ihtsdo.project.workflow.model.WfAction>
+        <name>Escalate</name>
+        <id>b1e4dc7c-19b2-48a7-9589-c41a063731b3</id>
+        <consequence reference="../../../../states/org.ihtsdo.project.workflow.model.WfState"/>
+        <businessProcess>sampleProcesses/GenericActionWithoutDestination.bp</businessProcess>
+      </org.ihtsdo.project.workflow.model.WfAction>
+    </entry>
+    <entry>
+      <string>Cancel</string>
+      <org.ihtsdo.project.workflow.model.WfAction>
+        <name>Cancel</name>
+        <id>12fcc942-dc5b-40ba-80fc-d828427305fb</id>
+        <consequence>
+          <name>canceled status</name>
+          <id>5a217399-281e-34e9-a08b-fcef8b6f5b0e</id>
+        </consequence>
+        <businessProcess>sampleProcesses/GenericActionWithoutDestination.bp</businessProcess>
+      </org.ihtsdo.project.workflow.model.WfAction>
+    </entry>
+    <entry>
+      <string>Send to review</string>
+      <org.ihtsdo.project.workflow.model.WfAction>
+        <name>Send to review</name>
+        <id>7557c0eb-9bdb-4515-8472-89fbf078cdfb</id>
+        <consequence reference="../../../../states/org.ihtsdo.project.workflow.model.WfState[3]"/>
+        <businessProcess>sampleProcesses/GenericActionWithoutDestination.bp</businessProcess>
+      </org.ihtsdo.project.workflow.model.WfAction>
+    </entry>
+    <entry>
+      <string>Discuss</string>
+      <org.ihtsdo.project.workflow.model.WfAction>
+        <name>Discuss</name>
+        <id>78d3ef35-7f32-4dfa-b861-bc2bf4be811a</id>
+        <consequence>
+          <name>For discussion</name>
+          <id>c5512325-cf3d-3a34-80f2-7cec28a39359</id>
+        </consequence>
+        <businessProcess>sampleProcesses/GenericActionWithoutDestination.bp</businessProcess>
+      </org.ihtsdo.project.workflow.model.WfAction>
+    </entry>
+  </actions>
+  <xlsFileName>
+    <string>drools-rules/generic-review-wf.xls</string>
+  </xlsFileName>
+  <drlFileName/>
+  <name>generic-review</name>
+</org.ihtsdo.project.workflow.model.WorkflowDefinition>

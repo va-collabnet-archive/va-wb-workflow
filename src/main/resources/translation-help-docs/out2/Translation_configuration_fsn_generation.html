@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-us" xml:lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="copyright" content="(C) Copyright 2005"/>
+<meta name="DC.rights.owner" content="(C) Copyright 2005"/>
+<meta name="DC.Type" content="topic"/>
+<meta name="DC.Title" content="Translation configuration - FSN generation strategy"/>
+<meta name="DC.Format" content="XHTML"/>
+<meta name="DC.Identifier" content="topic-1"/>
+<link rel="stylesheet" type="text/css" href="commonltr.css"/>
+<title>Translation configuration - FSN generation strategy</title>
+</head>
+<body id="topic-1"><a name="topic-1"><!-- --></a>
+
+
+  <h1 class="title topictitle1">Translation configuration - FSN generation strategy</h1>
+
+  <div class="body">
+    <p class="p">Defines the action to be taken when a preferred term is saved and there is still no FSN for
+      the concept.</p>
+
+    <p class="p"><img class="image" src="images/translation_config_fsn_generation.png"/></p>
+
+    <div class="p">
+      <a name="topic-1__ul_fnv_jlo_bg"><!-- --></a><ul class="ul" id="topic-1__ul_fnv_jlo_bg">
+        <li class="li"><em class="ph i">None</em>: no FSN is generated</li>
+
+        <li class="li"><em class="ph i">Same as preferred</em>: generates a FSN in the target language, with the same text as
+          the preferred and the translated semantic tag. Translation of the semantic tag hierarchy
+          is a pre-requisite for semantic tag generation</li>
+
+        <li class="li"><em class="ph i">Copy source language</em>: generates a new description in the target language, with
+          new IDs, identical to the source FSN</li>
+
+        <li class="li"><em class="ph i">Link source language</em>: includes the source language FSN in the target language
+          refset, as the new FSN, keeping the same identifiers</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+
+</body>
+</html>

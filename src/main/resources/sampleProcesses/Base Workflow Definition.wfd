@@ -1,0 +1,77 @@
+<org.ihtsdo.project.workflow.model.WorkflowDefinition>
+  <roles>
+    <org.ihtsdo.project.workflow.model.WfRole>
+      <name>JIF approver</name>
+      <id>7a8c8a56-6815-5abf-8d72-47b5122399f6</id>
+    </org.ihtsdo.project.workflow.model.WfRole>
+    <org.ihtsdo.project.workflow.model.WfRole>
+      <name>JIF editor</name>
+      <id>3585308c-3897-5709-91d9-1356617091ea</id>
+    </org.ihtsdo.project.workflow.model.WfRole>
+    <org.ihtsdo.project.workflow.model.WfRole>
+      <name>JIF reviewer</name>
+      <id>caeb77e2-abd4-5311-8ee0-c743694bd285</id>
+    </org.ihtsdo.project.workflow.model.WfRole>
+  </roles>
+  <states>
+    <org.ihtsdo.project.workflow.model.WfState>
+      <name>JIF approved for publication</name>
+      <id>b59420f6-c6a1-5bab-a379-45f0642044c4</id>
+    </org.ihtsdo.project.workflow.model.WfState>
+    <org.ihtsdo.project.workflow.model.WfState>
+      <name>JIF for approval</name>
+      <id>c7624995-be92-564a-905f-d42691e0584b</id>
+    </org.ihtsdo.project.workflow.model.WfState>
+    <org.ihtsdo.project.workflow.model.WfState>
+      <name>JIF for review</name>
+      <id>b7bce84b-4596-5df4-9615-934232582479</id>
+    </org.ihtsdo.project.workflow.model.WfState>
+    <org.ihtsdo.project.workflow.model.WfState>
+      <name>JIF item assigned</name>
+      <id>2cd075aa-fa92-5aa5-9f3d-d68c1c241d42</id>
+    </org.ihtsdo.project.workflow.model.WfState>
+  </states>
+  <actions>
+    <entry>
+      <string>Reject and send back to editor</string>
+      <org.ihtsdo.project.workflow.model.WfAction>
+        <name>Reject and send back to editor</name>
+        <id>be24c59c-d4e7-4791-8128-ab450f0dcecb</id>
+        <consequence reference="../../../../states/org.ihtsdo.project.workflow.model.WfState[4]"/>
+        <businessProcess>sampleProcesses\RejectActionWithoutDestination.bp</businessProcess>
+      </org.ihtsdo.project.workflow.model.WfAction>
+    </entry>
+    <entry>
+      <string>Approve for publication</string>
+      <org.ihtsdo.project.workflow.model.WfAction>
+        <name>Approve for publication</name>
+        <id>d1fc1521-03d3-4ad3-b98e-f86a167c55eb</id>
+        <consequence reference="../../../../states/org.ihtsdo.project.workflow.model.WfState"/>
+        <businessProcess>sampleProcesses\PromoteToReleaseActionWithoutDestination.bp</businessProcess>
+      </org.ihtsdo.project.workflow.model.WfAction>
+    </entry>
+    <entry>
+      <string>Send for review</string>
+      <org.ihtsdo.project.workflow.model.WfAction>
+        <name>Send for review</name>
+        <id>6d09d6ef-b40e-406a-be9a-ebca68633e9c</id>
+        <consequence reference="../../../../states/org.ihtsdo.project.workflow.model.WfState[3]"/>
+        <businessProcess>sampleProcesses\CommentActionWithoutDestination.bp</businessProcess>
+      </org.ihtsdo.project.workflow.model.WfAction>
+    </entry>
+    <entry>
+      <string>Send for approval</string>
+      <org.ihtsdo.project.workflow.model.WfAction>
+        <name>Send for approval</name>
+        <id>27009aa3-eec5-45a5-8fe3-ba3fb532264e</id>
+        <consequence reference="../../../../states/org.ihtsdo.project.workflow.model.WfState[2]"/>
+        <businessProcess>sampleProcesses\CommentActionWithoutDestination.bp</businessProcess>
+      </org.ihtsdo.project.workflow.model.WfAction>
+    </entry>
+  </actions>
+  <xlsFileName>
+    <string>drools-rules\JIF Base Workflow.xls</string>
+  </xlsFileName>
+  <drlFileName/>
+  <name>Base Workflow Definition</name>
+</org.ihtsdo.project.workflow.model.WorkflowDefinition>
