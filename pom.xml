@@ -8,7 +8,7 @@
 	</parent>
 	<artifactId>va-wb-workflow</artifactId>
 	<groupId>gov.va.wb</groupId>
-	<version>4.0-SNAPSHOT</version>
+	<version>4.0</version>
 	<packaging>pom</packaging>
 
 	<name>VA Terminology Workbench :: Project Management Resources</name>
@@ -48,4 +48,10 @@
 			</plugin>
 		</plugins>
 	</build>
+
+  <scm>
+    <connection>scm:svn:https://csfe.aceworkspace.net/svn/repos/workbench/pom/ihtsdo-wb-parent/tags/4.0</connection>
+    <developerConnection>scm:svn:https://csfe.aceworkspace.net/svn/repos/workbench/pom/ihtsdo-wb-parent/tags/4.0</developerConnection>
+    <url>https://csfe.aceworkspace.net/integration/viewvc/viewvc.cgi/pom/ihtsdo-wb-parent/tags/4.0?root=workbench&amp;system=exsy1002/ihtsdo-wb-parent-1/va-wb-workflow</url>
+  </scm>
 </project>
