@@ -1,0 +1,2 @@
+mvn release:prepare -DreleaseVersion=4.0 -DdevelopmentVersion=4.1-SNAPSHOT -Dtag=4.0
+mvn release:perform -Darguments="-DaltDeploymentRepository=maestro::default::https://va.maestrodev.com/archiva/repository/va-releases"
